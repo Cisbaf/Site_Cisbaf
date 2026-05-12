@@ -1,0 +1,22 @@
+.wp-block {} /*  (.wp-block {} ensures MT files load in Gutenberg editor) */
+
+
+/*= Blog home ================= */
+
+/** Blog home >> Site primary header wrap **/
+#ast-desktop-header .site-primary-header-wrap {
+	color: rgb(230, 231, 233) !important;
+}
+
+/** Blog home >> Ast primary header bar **/
+#ast-desktop-header .ast-primary-header-bar {
+	font-family: Open Sans Regular !important;
+	color: rgb(255, 255, 255) !important;
+	background-color: #105685 !important;
+}
+
+/** Blog home >> Ast row **/
+#main .ast-row {
+	color: rgb(16, 86, 133) !important;
+}
+

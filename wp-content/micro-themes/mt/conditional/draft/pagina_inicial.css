@@ -1,0 +1,53 @@
+.wp-block {} /*  (.wp-block {} ensures MT files load in Gutenberg editor) */
+
+
+/*= Pagina inicial ============ */
+
+/** Pagina inicial >> Swiper slide image **/
+.swiper-slide-active .swiper-slide-image {
+	border-radius: 20px !important;
+}
+
+/** Pagina inicial >> List item (#1) **/
+/* Cor de fundo PADRÃO (original) do primeiro item - Opcional se já estiver correto */.elementor-element-c684bf2 li:nth-of-type(1) {
+	
+}
+.elementor-element-c684bf2 li:nth-of-type(1) {
+	background-color: transparent !important;
+	-webkit-transition: 0.3s ease !important;
+	transition: 0.3s ease !important;
+	padding: 5px !important;
+}
+.elementor-element-c684bf2 li:nth-of-type(1):hover {
+	background-color: #CA9300 !important;
+	/* Substitua aqui pela sua COR AZUL EScura */
+	/* IMPORTANTE: Garanta que o texto fique branco para dar contraste */
+}
+.elementor-element-c684bf2 li:nth-of-type(1):hover a, 
+.elementor-element-c684bf2 li:nth-of-type(1):hover span, 
+.elementor-element-c684bf2 li:nth-of-type(1):hover {
+	color: #ffffff !important;
+}
+
+/** Pagina inicial >> Elementor element 78f4b64 **/
+.elementor-element-78f4b64 {
+	width: 100% !important;
+	-webkit-justify-content: center !important;
+	justify-content: center !important;
+	-webkit-align-items: center !important;
+	align-items: center !important;
+	grid-gap: 15px !important;
+	gap: 15px !important;
+	display: flex !important;
+	/* Centraliza o bloco inteiro de itens horizontalmente */
+	/* Mantém o alinhamento vertical centralizado */
+	/* Ajuste o espaço entre os itens aqui (ex: 15px ou 20px) */
+	/* Força os itens internos a ocuparem apenas o espaço do próprio conteúdo */
+}
+.elementor-element-78f4b64 > .elementor-widget, 
+.elementor-element-78f4b64 > .elementor-container > .elementor-column {
+	-webkit-flex: 0 0 auto !important;
+	flex: 0 0 auto !important;
+	width: auto !important;
+}
+
