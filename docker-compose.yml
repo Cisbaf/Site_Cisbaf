@@ -1,8 +1,10 @@
+version: '3.8'
+
 services:
+
+  # O WordPress usando PHP-FPM (mais leve e rápido que o Apache)
   wordpress:
-    image: wordpress:latest
-    ports:
-      - "8080:80"
+    image: wordpress:php8.2-fpm-alpine
     restart: always
     environment:
       WORDPRESS_DB_HOST: 192.168.1.10
@@ -11,3 +13,20 @@ services:
       WORDPRESS_DB_NAME: sitecisbaf
     volumes:
       - ./wp-content:/var/www/html/wp-content
+      - wordpress_data:/var/www/html
+
+  # O Servidor Web (Nginx) que atende as requisições
+  nginx:
+    depends_on:
+      - wordpress
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./nginx-conf:/etc/nginx/conf.d
+
+volumes:
+  wordpress_data:
